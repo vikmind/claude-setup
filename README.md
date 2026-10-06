@@ -1,11 +1,12 @@
 # claude-setup
 
-My Claude Code setup, as a plugin marketplace with two plugins.
+My Claude Code setup, as a plugin marketplace with three plugins.
 
 | Plugin | What it does | Manual step |
 |---|---|---|
 | [`tmux-attention`](plugins/tmux-attention) | Marks the tmux window of a session that waits for your input | one `source-file` line in `~/.tmux.conf` |
 | [`context-statusline`](plugins/context-statusline) | Status line with model, effort, context-window fill, and cache state | one `statusLine` block in `~/.claude/settings.json` |
+| [`share-local`](plugins/share-local) | Saves artifacts into a folder that a local web server publishes, on this Mac, the local network, or a Tailscale tailnet | run `/share-local:setup` |
 
 ## Install
 
@@ -27,7 +28,14 @@ My Claude Code setup, as a plugin marketplace with two plugins.
 /plugin install context-statusline@claude-setup
 ```
 
-Then do the manual step for each plugin. Both READMEs give the exact line, and
+4. Install `share-local`:
+
+```
+/plugin install share-local@claude-setup
+```
+
+Then do the manual step for each plugin. For `share-local`, run
+`/share-local:setup`. The other two READMEs give the exact line, and
 both lines point into `~/.claude/plugins/cache/claude-setup/`, so neither needs a
 clone of this repository.
 

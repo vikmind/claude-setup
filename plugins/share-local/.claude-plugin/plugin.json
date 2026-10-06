@@ -1,0 +1,14 @@
+{
+  "name": "share-local",
+  "version": "0.1.0",
+  "description": "Saves artifacts into a folder that a local web server publishes at login, on this Mac, the local network, or a Tailscale tailnet",
+  "author": {
+    "name": "Viktor Marchenko"
+  },
+  "keywords": [
+    "artifacts",
+    "http-server",
+    "tailscale",
+    "launchd"
+  ]
+}
