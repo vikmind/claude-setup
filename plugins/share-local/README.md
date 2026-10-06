@@ -12,6 +12,10 @@ Two skills:
 - `/share-local:share` writes an artifact into the folder and replies with its
   URL.
 
+Claude Code always prefixes plugin commands with the plugin name, so a plugin
+cannot provide a bare `/share`. Setup offers to add one as a personal skill at
+`~/.claude/skills/share/SKILL.md` that hands over to `/share-local:share`.
+
 macOS only, because the server runs as a launchd login agent.
 
 ## How it works
@@ -72,6 +76,7 @@ System Settings > Network > Firewall > Options.
 ```
 launchctl bootout gui/$(id -u)/com.claude-setup.share-local
 rm ~/Library/LaunchAgents/com.claude-setup.share-local.plist ~/.claude/share-local.json
+rm -r ~/.claude/skills/share         # only if you added the /share shortcut
 tailscale serve --http=<port> off   # only if Tailscale was enabled
 ```
 

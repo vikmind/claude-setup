@@ -26,7 +26,7 @@
       "name": "share-local",
       "source": "./plugins/share-local",
       "description": "Saves artifacts into a folder that a local web server publishes at login, on this Mac, the local network, or a Tailscale tailnet",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "author": {
         "name": "Viktor Marchenko"
       }
